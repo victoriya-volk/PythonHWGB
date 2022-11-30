@@ -24,16 +24,64 @@ def start_task_work(num):
 my_list = start_task_work(len_my_list)
 del_num = int(input('Введите цифру для удаления: '))
 
-def cranch_number_for_list(list_of_numbers):
+def crash_number_for_list(list_of_numbers):
     j = 0
     while j < len(my_list):
         my_list[j] = [int(a) for a in str(my_list[j])]
         j += 1
+    return list_of_numbers
 
-for arr in my_list:
-    k = 0
-    while k < len(arr):
-        if arr[k] == del_num:
-            del arr[k]
-        k += 1
+crash_number_for_list(my_list)
+
+def deleted_number(list_for_deleted):
+    for arr in list_for_deleted:
+        k = 0
+        while k < len(arr):
+            if arr[k] == del_num:
+                del arr[k]
+            k += 1
+    return list_for_deleted
+
+deleted_number(my_list)
+def list_after_deleting(list_for_split):
+    step = 0
+    arr_spliting = []
+    while step < len(list_for_split):
+        arr_spliting.append(int(''.join(map(str, list_for_split[step]))))
+        step += 1
+    print(arr_spliting)
+
+list_after_deleting(my_list)
+
+def sum_of_numbers(list_for_sum):
+    elem = 0
+    sum_of_list = 0
+    while elem < len(list_for_sum):
+        for i in list_for_sum[elem]:
+            sum_of_list += i
+        if sum_of_list > 9:
+            while sum_of_list > 9:
+                sum_of_list = int(sum_of_list / 10) + sum_of_list % 10
+        list_for_sum[elem] = sum_of_list
+        sum_of_list = 0
+        elem += 1
+    return list_for_sum
+
+sum_of_numbers(my_list)
+
+print(my_list)
+def deleted_doubles(list_for_sort):
+    index = 0
+    while index < len(list_for_sort):
+        step = index + 1
+        while step < len(list_for_sort):
+            if list_for_sort[index] == list_for_sort[step]:
+                del list_for_sort[step]
+            else:
+                step += 1
+        index += 1
+    return list_for_sort
+
+deleted_doubles(my_list)
+
 print(my_list)
