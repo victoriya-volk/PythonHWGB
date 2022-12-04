@@ -7,7 +7,7 @@
 example_1 = [2, 3, 4, 5, 6]
 example_2 = [2, 3, 5, 6]
 
-def arr_of_multi_pairs(list_of_numbers):
+def arr_of_multi_pairs(list_of_numbers: list[int]) -> list[int]:
     count_pairs = round(len(list_of_numbers)/2)
     if count_pairs < len(list_of_numbers) / 2:
         count_pairs += 1

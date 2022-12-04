@@ -4,9 +4,9 @@
 # Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
 example_1 = [1.1, 1.2, 3.1, 5, 10.01]
-example_2 = []
+example_2 = [1.76, 5.97, 3.12, 8, 3.6]
 
-def diff_of_fract_part(list_of_fract):
+def diff_of_fract_part(list_of_fract: list[float|int]) -> float:
     i = 0
     while i < len(list_of_fract):
         list_of_fract[i] = round(list_of_fract[i] - int(list_of_fract[i]), 2)
@@ -26,3 +26,4 @@ def diff_of_fract_part(list_of_fract):
 
     return diff_of_fract
 print(diff_of_fract_part(example_1))
+print(diff_of_fract_part(example_2))

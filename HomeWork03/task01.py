@@ -3,7 +3,7 @@
 
 import random
 len_my_list = int(input('Введите длинну списка: '))
-def start_task_work(num):
+def start_task_work(num: int) -> list[int]:
     new_list = []
     i = 0
     while i < num:
@@ -14,7 +14,7 @@ def start_task_work(num):
 my_list = start_task_work(len_my_list)
 example_list = [2, 3, 5, 9, 3]
 
-def sum_of_odd_num(list_of_num):
+def sum_of_odd_num(list_of_num: list[int]) -> int:
     print(list_of_num)
     sum_of_odd = 0
     i = 0
