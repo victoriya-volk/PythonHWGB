@@ -12,8 +12,6 @@ def negafib(n:int) -> int:
         return 1
     elif n == -2:
         return -1
-    elif n == -3:
-        return 2
     else:
         return negafib(n+2) - negafib(n+1)
 def f_list_negafib(number: int) -> list:
