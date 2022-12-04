@@ -6,7 +6,7 @@ my_list = list(range(-my_number, my_number + 1))
 def my_shuffle (array):
     i = 0
     while i < len(array):
-        new_i = random.randint(-len(array), len(array))
+        new_i = random.randint(-len(array), len(array)-1)
         shuffle_help = array[i]
         array[i] = array[new_i]
         array[new_i] = shuffle_help
