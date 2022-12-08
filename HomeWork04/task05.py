@@ -1,6 +1,7 @@
 # Даны два файла, в каждом из которых находится запись многочлена.
 # Задача - сформировать файл, содержащий сумму многочленов (складываются числа, у которых "х" в одинаковых степенях).
-import task04 as helps
+import create_new_equation as create
+import create_new_equation
 first_path = r'first.txt'
 second_path = r'second.txt'
 result_path = r'result.txt'
@@ -52,6 +53,6 @@ def add_lists_of_numbers(first_list : list[str], second_list : list[str]) -> lis
 new_list = add_lists_of_numbers(get_the_numbers(first_equation), get_the_numbers(second_equation))
 
 with open(result_path, 'a') as result_data:
-    result_data.write(helps.create_new_equation(new_list))
+    result_data.write(create.create_new_equation(new_list))
     result_data.close()
 
