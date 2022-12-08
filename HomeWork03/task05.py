@@ -16,7 +16,7 @@ def negafib(n:int) -> int:
         return negafib(n+2) - negafib(n+1)
 def f_list_negafib(number: int) -> list:
     listfib = [0]
-    for e in range(1, user_number):
+    for e in range(1, user_number + 1):
         listfib.append(fib(e))
         listfib.insert(0, negafib(-e))
     return listfib
