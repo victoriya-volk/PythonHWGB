@@ -52,7 +52,7 @@ def add_lists_of_numbers(first_list : list[str], second_list : list[str]) -> lis
 
 new_list = add_lists_of_numbers(get_the_numbers(first_equation), get_the_numbers(second_equation))
 
-with open(result_path, 'a') as result_data:
+with open(result_path, 'w') as result_data:
     result_data.write(create.create_new_equation(new_list))
     result_data.close()
 

@@ -18,13 +18,11 @@ def appended_new_koef () -> list[int]:
     print(koef_list)
     return koef_list
 
-# first_equation = create.create_new_equation(appended_new_koef())
-second_equation = create.create_new_equation(appended_new_koef())
 with open(first_path, 'w') as first_data:
     first_data.write(create.create_new_equation(appended_new_koef()))
     first_data.close()
 with open(second_path, 'w') as second_data:
-    second_data.write(second_equation)
+    second_data.write(create.create_new_equation(appended_new_koef()))
     second_data.close()
 
 
