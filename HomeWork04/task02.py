@@ -3,7 +3,7 @@ numZ = int(input('Введите число для проверки просты
 def factorize(num: int) -> list[int]:
     nums_list = []
     i = 2
-    while i <= (num ** 0.5 + 1):
+    while i <= num ** 0.5:
         while num % i == 0:
             nums_list.append(i)
             num = int(num / i)

@@ -7,7 +7,7 @@
 #     Ввод: 0.001
 #     Вывод: 3.141
 numP = 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899582
-exactness = float(input('Введите точность округления числаё: '))
+exactness = float(input('Введите точность округления числа: '))
 def round_the_number(num_for_round: float, user_exactness: float) -> float:
     increase = 1
     step = 0
