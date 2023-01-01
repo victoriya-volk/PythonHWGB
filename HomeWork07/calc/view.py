@@ -1,3 +1,16 @@
+def first_user_input(): # первый ввод юзера для определения с чем имеем дело
+    while True:
+        user_enter = input('Введите целое число или выражение: ')
+        try:
+            int(user_enter)
+        except:
+            for sign in user_enter:
+                if not sign.isdigit() and sign not in ['+', '-', '/', '*', ' ']:
+                    print('Ошибка!')
+                    break
+            # continue
+        return user_enter
+
 def input_number():
     while True:
         try:
