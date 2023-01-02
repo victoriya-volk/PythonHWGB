@@ -1,6 +1,7 @@
 import view as v
 import model as m
 import exception as ex
+import logger as log
 
 def input_numX():
     user_enter = v.first_user_input()
@@ -36,6 +37,7 @@ def solution():
         m.divis()
     result_string = f'{m.get_numX()} {m.get_action()} {m.get_numY()} = {m.get_result()}'
     v.print_to_console(result_string)
+    log.write_operation(result_string)
     m.set_numX(m.get_result())
 
 def solution_expression(): # обращения к функциям вычисляющим значение выражения
@@ -43,6 +45,7 @@ def solution_expression(): # обращения к функциям вычисл
     ex.do_calculation_exception(ex.get_express_list())
     result_str = f'{ex.get_exception_str()} = {ex.do_calculation_exception(ex.get_express_list())}'
     v.print_to_console(result_str)
+    log.write_operation(result_str)
     m.set_numX(ex.get_exception_result())
 
 def start():
