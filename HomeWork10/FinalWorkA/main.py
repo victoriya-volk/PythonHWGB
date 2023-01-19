@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 limit = 100
 step = 0.01
 increase_high = True
-color = 'r'
+color = 'b'
 line_style = '-.'
 
 x_change = {-limit: 'inc'}
@@ -19,10 +19,10 @@ def f(x):
 
 def switch_color():
     global color
-    if color == 'r':
-        color = 'b'
-    else:
+    if color == 'b':
         color = 'r'
+    else:
+        color = 'b'
     return color
 
 def switch_line():
@@ -43,7 +43,7 @@ for x_cur in x:
 
 print(x_min, f_min)
 
-for i  in range(len(x)-1):
+for i in range(len(x)-1):
     if (f(x[i]) > 0 and f(x[i+1]) < 0) or (f(x[i]) < 0 and f(x[i+1]) > 0):
         x_change[x[i]] = 'zero'
     if increase_high:
@@ -74,6 +74,9 @@ for i in range(len(x_keys) - 1):
     plt.plot(x_cur, f(x_cur), color)
 
 ax = plt.gca()
+plt.title(f'f(x) = -12x^4*sin(cos(x)) - 18x^3+5x^2 + 10x - 30')
+ax.spines.left.set_position('zero')
+ax.spines.bottom.set_position('zero')
 ax.spines['left'].set_position('center')
 ax.spines['bottom'].set_position('center')
 ax.spines['top'].set_visible(False)
