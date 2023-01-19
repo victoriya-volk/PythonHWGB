@@ -74,6 +74,8 @@ for i in range(len(x_keys) - 1):
     plt.grid(True)
     plt.plot(x_cur, f(x_cur), color)
 ax = plt.gca()
+plt.title(f'f(x) = 0.6x^3+5.5x^2+10x -5')
+
 ax.spines.left.set_position('zero')
 ax.spines.bottom.set_position('zero')
 ax.spines['top'].set_visible(False)
